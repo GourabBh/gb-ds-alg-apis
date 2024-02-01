@@ -1,5 +1,10 @@
 package dev.gourab.numbers;
 
+/**
+ * A perfect number has the sum of its factors equal to itself.
+ * 
+ * @author Gourab Bhattacharjee
+ */
 public class Perfect {
   private static Perfect perfectInstance;
 
