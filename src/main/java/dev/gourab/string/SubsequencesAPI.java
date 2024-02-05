@@ -13,4 +13,6 @@ public interface SubsequencesAPI {
   String findLongestCommonPrefixAmong(final String[] strings);
 
   List<Integer> findFirstIndicesOfSubsequenceAnagrams(final String string, final String subString);
+
+  int countPalindromicSubsequences(final String string);
 }

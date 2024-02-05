@@ -34,4 +34,9 @@ public class StringTestAPI {
     assertEquals(subsequencesAPI
         .findFirstIndicesOfSubsequenceAnagrams(ip, sub).toString(), "[0, 6]");
   }
+
+  public void shouldBe3PalindromicSubsequences() {
+    final var string = "aabca";
+    assertEquals(subsequencesAPI.countPalindromicSubsequences(string), 3);
+  }
 }

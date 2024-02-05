@@ -1,6 +1,7 @@
 package dev.gourab.string.impl;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import dev.gourab.string.CheckIfSubsequenceHandler;
@@ -199,5 +200,44 @@ public class SubsequencesAPIImpl implements SubsequencesAPI, CheckIfSubsequenceH
       }
     }
     return firstIndices;
+  }
+
+  public int countPalindromicSubsequences(final String string) {
+    if (string == null || string.isBlank() || string.isEmpty())
+      return 0;
+
+    final var alphabetFirstOcc = new int[26];
+    final var alphabetLastOcc = new int[26];
+
+    // This step is crucial.
+    Arrays.fill(alphabetFirstOcc, Integer.MAX_VALUE);
+
+    /*
+     * Find indices of first and last occurrence of each lowercase alphabets in
+     * string.
+     */
+    for (var chIdx = 0; chIdx < string.length(); ++chIdx) {
+      final var ch = string.charAt(chIdx);
+      final var alphabetIdx = ch - 'a';
+      alphabetFirstOcc[alphabetIdx] = Integer
+          .min(alphabetFirstOcc[alphabetIdx], chIdx);
+      alphabetLastOcc[alphabetIdx] = chIdx;
+    }
+
+    var cnt = 0;
+    /*
+     * Loop through all the 26 lowercase alphabets, count all the distinct
+     * characters between each
+     * character's occurence.
+     */
+    for (var chIdx = 0; chIdx < 26; ++chIdx)
+      if (alphabetFirstOcc[chIdx] < alphabetLastOcc[chIdx])
+        cnt += (int) string
+            .substring(alphabetFirstOcc[chIdx] + 1, alphabetLastOcc[chIdx])
+            .chars()
+            .distinct()
+            .count();
+
+    return cnt;
   }
 }

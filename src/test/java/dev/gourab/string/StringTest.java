@@ -39,4 +39,9 @@ public class StringTest {
     stringTestAPI.abcShouldBeSubsequenceOfaxbdcef();
   }
 
+  @Test
+  public void testCntPalSubs() {
+    stringTestAPI.shouldBe3PalindromicSubsequences();
+  }
+
 }
