@@ -2,6 +2,7 @@ package dev.gourab.arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.stream.Collectors;
 
 /**
@@ -69,4 +70,16 @@ public class ArraysAPI {
     }
     return false;
   }
+  
+	public boolean containsDuplicate(final int[] nums) {
+		if (nums == null || nums.length == 0)
+			return false;
+		final var uniqueNos = new HashSet<Integer>();
+		for (final var num : nums)
+			if (!uniqueNos.contains(num))
+				uniqueNos.add(num);
+			else
+				return true;
+		return false;
+	}
 }

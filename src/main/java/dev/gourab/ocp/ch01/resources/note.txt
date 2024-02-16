@@ -1,0 +1,92 @@
+Terminology, details, etc.
+
+ Java main basic topics:
+ packages, classes, variables, data types.
+ 
+ Creating a variable like 3dMap, this - not possible.
+ 
+ Environment:
+  Couple of techs:
+  
+  javac - .java -> .class (bytecode)
+  
+  java - this command initialises the program execution.
+  
+  jar - ZIP of java class files
+  
+  javadoc - For docs.
+  
+  javac command generates an intermediary instruction (bytecode) which java command can
+  recognize/identify.
+  
+  java command launches the JVM
+  
+  JVM knows how to run the instruction in particular OS or in any hardware (like pressure machine,
+  watch, washing machine, etc)
+  
+  The env. where the bytecode instruction executes is JRE.
+  
+  The object concept is applicable only during program runtime.
+  
+  instance - representer
+  
+  State of program - determined by various objects of all different classes.
+  
+  State of an object - field
+  
+  class - The basic building block in Java.
+  
+  In a class, we define its features.
+  
+  To use classes, we create objects.
+  
+  Object - runtime instance of a class in memory.
+  
+  An object in memory has no identity. It is with its address that gets identified.
+  The address is called reference. A reference variable stores an object's address.
+  
+  A variable has a name and a type. - Only values whose type is compatible with that of the variable,
+  can be assigned to variables.
+  
+  Methods - operation/logic that can be called again once defined.
+  
+  Two types - One that returns a value of a type.
+   - One that returns control to the caller silently - void methods.
+   
+ parameters and arguments.
+ 
+ void methods sometimes require information to be passed to it from calling place.
+ 
+ The information placeholder is the parameter in the method. The actual information from the
+ invoking place - argument
+ 
+ method signature - the method name and parameter types.
+ 
+ main() method - entry point into the program - It's the method that JVM looks for when a program
+ starts executing.
+ 
+ access modifier - level of exposure of a method/building block to potential callers.
+ 
+ static - keyword which binds a method to its class so it can be called by just the class name.
+ 
+ void - one of method's return type. It indicates nothing is returned from a method.
+ 
+ void methods are perfect for cases where the object's state is changed.
+ 
+ program state v/s object state
+ 
+ main() method changes program state from started to finish.
+ 
+ File cabinet -> folder -> paper analogy
+ module -> package -> class (.java/.class)
+ 
+ import statements - instructions from programmer to Java compiler for the package name to look in
+ for classes.
+ 
+ packages - logical groupings for Java classes.
+ 
+ Java compiler looks for class names in packages.
+  
+  
+  
+  

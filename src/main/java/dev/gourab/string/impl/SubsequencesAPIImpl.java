@@ -115,7 +115,7 @@ public class SubsequencesAPIImpl implements SubsequencesAPI, CheckIfSubsequenceH
     if (strings == null || strings.length == 0)
       return "";
     // Iterate through the character indices of the first string.
-    for (var chIdx = 0; chIdx < strings.length; ++chIdx) {
+    for (var chIdx = 0; chIdx < strings[0].length(); ++chIdx) {
       // Iterate through the string indices in strings, starting from second string.
       for (var strIdx = 1; strIdx < strings.length; ++strIdx) {
         /*
